@@ -142,7 +142,7 @@ nav{
         position: fixed;
         top: 0;
         left: 0px;
-        width: 100vw;
+        width: 101vw;
         height: 100vh;
         background-color: var(--primary);
         flex-direction: column;
@@ -154,7 +154,7 @@ nav{
     
     .navItens li{
         margin: 40px 0px 0px 35px;
-        width: 60%;
+        width: 80%;
         padding: 10px;
         border-radius: 5px;
         position: relative;
@@ -164,7 +164,7 @@ nav{
     .navItens li::after {
         content: " ";
         position: absolute;
-        right: -35%;
+        right: 0%;
         top: 50%;
         transform: translateY(-50%);
         width: 0;
@@ -173,6 +173,7 @@ nav{
         border-bottom: 5px solid transparent;
         border-left: 5px solid white;
         margin-left: 10px;
+        margin-right: 10px;
     }
     
 
@@ -193,7 +194,7 @@ nav{
         padding: 10px 15px 10px 15px;
         text-align: center;
         margin-inline: auto;
-        margin-top: 50%;
+        margin-top: 40%;
         width: 70%;
     }
 
@@ -202,7 +203,7 @@ nav{
     }
 
     .containerNav.active{
-        width: 100.8%;
+        width: 101vw;
         top: -21px;
         align-items: baseline;
     }
