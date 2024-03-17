@@ -137,6 +137,10 @@ nav{
     transition: 0.3s;
 }
 
+.containerRedes{
+    display: none;
+}
+
 @media (max-width: 480px) {
     .navItens{
         position: fixed;
@@ -153,7 +157,7 @@ nav{
     }
     
     .navItens li{
-        margin: 40px 0px 0px 35px;
+        margin: 20px 0px 0px 35px;
         width: 80%;
         padding: 10px;
         border-radius: 5px;
@@ -185,7 +189,7 @@ nav{
     }
 
     .navItens li:nth-child(1){
-        margin-top: 130px;
+        margin-top: 100px;
     }
     
     .navItens li:nth-child(4){
@@ -193,8 +197,9 @@ nav{
         padding: 10px 15px 10px 15px;
         text-align: center;
         margin-inline: auto;
-        margin-top: 40%;
+        margin-top: 20%;
         width: 70%;
+        border-radius: 10px;
     }
 
     .navItens li:nth-child(4)::after{
@@ -219,7 +224,7 @@ nav{
 
     .containerNav.active .hamburger{
         position: fixed;
-        top: 50px;
+        top: 40px;
         right: 27px;
         border-top-color: transparent;
     }
@@ -241,7 +246,7 @@ nav{
         align-items: center;
         justify-content: center;
         margin-top: auto;
-        margin-bottom: 70px;
+        margin-bottom: 80px;
         font-size: 20px;
         color: #c4c4c4;
     }
