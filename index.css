@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* Fonts */
+@font-face {
+    font-family: 'Futura';
+    src: url(src/fonts/Futura.ttf) format('opentype');
+}
+@font-face {
+    font-family: 'Futura-Medium';
+    src: url(src/fonts/Futura-Medium.ttf) format('opentype');
+}
+@font-face {
+    font-family: 'Nanum';
+    src: url(src/fonts/Nanum.ttf) format('opentype');
+}
+
+/* root */
+:root{
+    --primary: #4f9e41;
+    --secodary: #7abf68;
+    --accent: #257e1a;
+    --background: #cfffb6;
+    --text: #1b1b1b;
+
+    --font-padrao: 'Futura', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font-padrao);
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+/*------------------------------------- Header -----------------------------------------------------------------*/
+
+header{
+    height: 700px;
+    background-image: url(src/images/b1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerNav{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    margin: 20px;
+    max-width: 1280px;
+    padding: 5px 30px;
+    border: 2px solid var(--accent);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.084);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.logo{
+    margin-right: auto;
+    font-size: 25px;
+    font-family: 'Nanum', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+.navItens{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    list-style-type: none;
+}
+
+.navItens li{
+    padding: 3px 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    color: rgb(218, 218, 218);
+    transition: background-color 0.35s ease-in-out 0.04s;
+}
+
+.navItens li:hover{
+    background-color: var(--primary);
+    color: white;
+}
+
+.navItens li.singUp:hover{
+    background-color: #006100;
+    color: white;
+}
