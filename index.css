@@ -99,7 +99,7 @@ nav{
     color: white;
 }
 
-.navItens li.singUp:hover{
+.navItens li:nth-child(4):hover{
     background-color: #006100;
     color: white;
 }
@@ -146,11 +146,59 @@ nav{
         height: 100vh;
         background-color: var(--primary);
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        align-items: normal;
         gap: 0px;
         clip-path: circle(100px at 90% -15%);
         pointer-events: none;
+    }
+    
+    .navItens li{
+        margin: 40px 0px 0px 35px;
+        width: 60%;
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+        font-size: 23px;
+    }
+
+    .navItens li::after {
+        content: " ";
+        position: absolute;
+        right: -35%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid white;
+        margin-left: 10px;
+    }
+    
+
+    .navItens li:hover{
+        background-color: #267e1a75;
+    }
+
+    .navItens li:nth-child(4):hover{
+        background-color: var(--secodary);
+    }
+
+    .navItens li:nth-child(1){
+        margin-top: 130px;
+    }
+    
+    .navItens li:nth-child(4){
+        background-color: var(--accent);
+        padding: 10px 15px 10px 15px;
+        text-align: center;
+        margin-inline: auto;
+        margin-top: 50%;
+        width: 70%;
+    }
+
+    .navItens li:nth-child(4)::after{
+        border: none;
     }
 
     .containerNav.active{
@@ -171,8 +219,8 @@ nav{
 
     .containerNav.active .hamburger{
         position: fixed;
-        top: 26px;
-        right: 25px;
+        top: 50px;
+        right: 27px;
         border-top-color: transparent;
     }
     .containerNav.active .hamburger::before{
