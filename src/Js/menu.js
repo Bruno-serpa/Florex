@@ -6,7 +6,7 @@ const footer = document.querySelector("containerFooter");
 
 hamburger.addEventListener("click", () => {
     nav.classList.toggle("active");
-    remover.style.display = nav.classList.contains("active") ? "none" : "block";
-    main.style.display = nav.classList.contains("active") ? "none" : "block";
-    footer.style.display = nav.classList.contains("active") ? "none" : "block";
+    remover.style.display = nav.classList.contains("active") ? "none" : "flex";
+    main.style.display = nav.classList.contains("active") ? "none" : "flex";
+    footer.style.display = nav.classList.contains("active") ? "none" : "flex";
 });
