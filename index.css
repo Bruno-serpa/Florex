@@ -138,11 +138,6 @@ nav{
 }
 
 @media (max-width: 480px) {
-    .containerNav{
-        width: 100.8%;
-        top: -21px;
-        align-items: baseline;
-    }
     .navItens{
         position: fixed;
         top: 0;
@@ -155,13 +150,19 @@ nav{
         align-items: center;
         gap: 0px;
         clip-path: circle(100px at 90% -15%);
-        transition: 0.8s ease-out;
         pointer-events: none;
+    }
+
+    .containerNav.active{
+        width: 100.8%;
+        top: -21px;
+        align-items: baseline;
     }
 
     .containerNav.active .navItens{
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
+        transition: 0.7s ease-in;
     }
 
     .hamburger{
