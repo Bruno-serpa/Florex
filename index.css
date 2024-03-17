@@ -207,7 +207,7 @@ nav{
     }
 
     .containerNav.active{
-        width: 101vw;
+        width: 102vw;
         top: -21px;
         align-items: baseline;
     }
