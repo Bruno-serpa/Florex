@@ -40,7 +40,7 @@ html, body{
 /*------------------------------------- Header -----------------------------------------------------------------*/
 
 header{
-    height: 700px;
+    height: 600px;
     background-image: url(src/images/b1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -59,7 +59,7 @@ nav{
     position: fixed;
     top: 0;
     width: 90%;
-    margin: 20px;
+    margin-block: 20px;
     max-width: 1280px;
     padding: 5px 30px;
     border: 2px solid var(--accent);
@@ -83,7 +83,7 @@ nav{
     display: flex;
     align-items: center;
     gap: 5px;
-    list-style-type: none;
+    list-style: none;
 }
 
 .navItens li{
@@ -103,3 +103,85 @@ nav{
     background-color: #006100;
     color: white;
 }
+
+/*------------------------------- Menu Hamburger -----------------------------------------------------------------*/
+
+.hamburger{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 2.5px solid white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hamburger::before{
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 2.5px;
+    background: white;
+    margin-top: 4px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.hamburger::after{
+    content: " ";
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    background: white;
+    margin-top: 4px;
+    position: relative;
+    transition: 0.3s;
+}
+
+@media (max-width: 480px) {
+    .containerNav{
+        width: 100.8%;
+        top: -21px;
+        align-items: baseline;
+    }
+    .navItens{
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--primary);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0px;
+        clip-path: circle(100px at 90% -15%);
+        transition: 0.8s ease-out;
+        pointer-events: none;
+    }
+
+    .containerNav.active .navItens{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .containerNav.active .hamburger{
+        position: fixed;
+        top: 26px;
+        right: 25px;
+        border-top-color: transparent;
+    }
+    .containerNav.active .hamburger::before{
+        width: 25px;
+        transform: rotate(135deg);
+    }
+    .containerNav.active .hamburger::after{
+        width: 25px;
+        transform: rotate(-135deg);
+        top: -6.5px;
+    }
+  }
+  
