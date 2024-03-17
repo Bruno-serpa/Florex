@@ -176,7 +176,6 @@ nav{
         margin-right: 10px;
     }
     
-
     .navItens li:hover{
         background-color: #267e1a75;
     }
@@ -224,14 +223,36 @@ nav{
         right: 27px;
         border-top-color: transparent;
     }
+
     .containerNav.active .hamburger::before{
         width: 25px;
         transform: rotate(135deg);
     }
+
     .containerNav.active .hamburger::after{
         width: 25px;
         transform: rotate(-135deg);
         top: -6.5px;
+    }
+
+    .containerRedes{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: 50px;
+        font-size: 20px;
+        color: #c4c4c4;
+    }
+
+    .containerRedes p{
+        padding: 10px;
+    }
+
+    .containerRedes p:hover{
+        background-color: #79a57e61;
+        border-radius: 10px;
     }
   }
   
